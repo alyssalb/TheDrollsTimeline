@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Fool's Guide to Drollery</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Garamond', 'Georgia', serif;
+      background-color: #f5f0e6;
+      color: #2c1b10;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #5e3023;
+      color: #fff8e1;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      font-variant: small-caps;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: #d4c3a3;
+      padding: 0.5rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #c2b49a;
+      z-index: 10;
+    }
+
+    nav a {
+      margin: 0.5rem;
+      color: #5e3023;
+      text-decoration: none;
+      font-weight: bold;
+      font-variant: small-caps;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .timeline {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .entry {
+      margin-bottom: 3rem;
+      border-left: 4px solid #5e3023;
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    .entry::before {
+      content: "";
+      position: absolute;
+      left: -10px;
+      top: 0;
+      width: 18px;
+      height: 18px;
+      background-color: #5e3023;
+      border-radius: 50%;
+      border: 2px solid #fff;
+    }
+
+    .entry h2 {
+      margin-top: 0;
+      color: #3b2419;
+      font-size: 1.25rem;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .entry {
+        padding-left: 0.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>A Fool's Guide to Drollery</h1>
+    <p>English Theatre from the Elizabethan Era to the Stuart Restoration</p>
+  </header>
+
+  <nav>
+    <a href="#1558">1558</a>
+    <a href="#1576">1576</a>
+    <a href="#1587">1587–1599</a>
+    <a href="#1590">1590s–1610s</a>
+    <a href="#1603">1603</a>
+    <a href="#1616">1616</a>
+    <a href="#1625">1625</a>
+    <a href="#1642">1642</a>
+    <a href="#1649">1649</a>
+    <a href="#1650">1650s</a>
+    <a href="#1658">1658</a>
+    <a href="#1660">1660</a>
+  </nav>
+
+  <main class="timeline">
+    <section class="entry" id="1558">
+      <h2>1558 – Elizabeth I is Crowned</h2>
+      <p>Start of the Elizabethan era, a time of great patronage and support for the arts. Theatre flourished with royal and noble support both monetarily and affectively.</p>
+    </section>
+
+    <section class="entry" id="1576">
+      <h2>1576 – The Theatre Opens in Shoreditch</h2>
+      <p>The first permanent purpose-built public playhouse in London opens, built by James Burbage. It launched a new era of professional acting companies and single-purpose venues. The Theatre was later dismantled, and its materials used to construct The Globe in 1599.</p>
+    </section>
+
+    <!-- More timeline entries go here as you expand -->
+
+  </main>
+</body>
+</html>
