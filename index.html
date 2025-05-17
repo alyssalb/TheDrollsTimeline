@@ -10,7 +10,8 @@
       font-family: 'Garamond', 'Georgia', serif;
       background-color: #f5f0e6;
       color: #2c1b10;
-      line-height: 1.6;
+      font-size: 1.1rem;
+      line-height: 1.7;
     }
 
     header {
@@ -37,6 +38,7 @@
       flex-wrap: wrap;
       border-bottom: 1px solid #c2b49a;
       z-index: 10;
+      margin-bottom: 1rem;
     }
 
     nav a {
@@ -45,8 +47,14 @@
       text-decoration: none;
       font-weight: bold;
       font-variant: small-caps;
+      transition: color 0.3s ease;
     }
 
+    nav a.active {
+      color: #2e4f2e;
+      text-decoration: underline;
+    }
+    
     nav a:hover {
       text-decoration: underline;
       color: #2e4f2e;
@@ -80,7 +88,9 @@
     .entry h2 {
       margin-top: 0;
       color: #2e4f2e;
-      font-size: 1.25rem;
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-bottom: 0.25rem;
     }
 
     .tooltip {
@@ -311,8 +321,31 @@
         <p>Proscenium stages were introduced and grew in popularity. Restoration theatre practices established a tradition that leads to our modern single-purpose venue private theaters, moving from the public houses of the past.           
           </p>
     </section>
+    <footer style="text-align:center; font-size:0.8rem; color:#999; padding:1rem;">
+  &copy; 2025 Alyssa Barrack. Site created with HTML/CSS.
+    </footer>
   </main>
   <script>
+    const navLinks = document.querySelectorAll('nav a');
+    const sections = Array.from(document.querySelectorAll('.entry'));
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 80;
+        if (scrollY >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').slice(1) === current) {
+          link.classList.add('active');
+        }
+      });
+    });
+    
     const overlay = document.createElement('div');
     overlay.classList.add('lightbox-overlay');
     
