@@ -49,6 +49,7 @@
 
     nav a:hover {
       text-decoration: underline;
+      color: #2e4f2e;
     }
 
     .timeline {
@@ -71,22 +72,22 @@
       top: 0;
       width: 18px;
       height: 18px;
-      background-color: #5e3023;
+      background-color: #2e4f2e;
       border-radius: 50%;
       border: 2px solid #fff;
     }
 
     .entry h2 {
       margin-top: 0;
-      color: #3b2419;
+      color: #2e4f2e;
       font-size: 1.25rem;
     }
 
     .tooltip {
       position: relative;
       cursor: help;
-      color: #8b0000;
-      border-bottom: 1px dotted #8b0000;
+      color: #2e4f2e;
+      border-bottom: 1px dotted #2e4f2e;
     }
 
     .tooltip:hover::after {
@@ -136,8 +137,10 @@
     }
 
     .lightbox img {
-      display: block;
+      display: inline;
       border: none;
+      vertical-align: middle; 
+      max-height: 1.2em;
     }
 
     .lightbox {
