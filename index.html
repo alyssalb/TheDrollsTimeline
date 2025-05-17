@@ -119,6 +119,14 @@
       z-index: 1000;
     }
 
+    .lightbox-caption {
+      color: #fff;
+      font-size: 1rem;
+      margin-top: 1rem;
+      text-align: center;
+      max-width: 90%;
+    }
+
     .lightbox-overlay img {
       max-width: 90%;
       max-height: 90%;
@@ -292,6 +300,11 @@
   <script>
     const overlay = document.createElement('div');
     overlay.classList.add('lightbox-overlay');
+    
+    const caption = document.createElement('div');
+    caption.classList.add('lightbox-caption');
+
+    overlay.appendChild(caption);
     document.body.appendChild(overlay);
     
     document.querySelectorAll('.lightbox').forEach(link => {
@@ -299,8 +312,13 @@
       e.preventDefault();
       const img = document.createElement('img');
       img.src = link.href;
+      img.alt = link.querySelector('img')?.alt || '';
       overlay.innerHTML = '';
       overlay.appendChild(img);
+        if (img.alt) {
+          caption.textContent = img.alt;
+          overlay.appendChild(caption);
+        }
       overlay.style.display = 'flex';
     });
   });
